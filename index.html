@@ -25,45 +25,46 @@
             <p>You <em>know</em> you want to.</p>
         </section>
         <div class="login-form">
-            <form action="#" method="post">
+            <form id="create-form" action="#" method="post">
                 <p class="form-para">Let's do this!</p>
                 <div class="rows">
                     <div class="row-1">
                         <div class="input-group">
-                            <label for="fname">FIRST NAME</label>
-                            <input type="text" id="fname" name="fname">
+                            <label for="fname">FIRST NAME*</label>
+                            <input type="text" id="fname" name="fname" required>
                         </div>
                         <div class="input-group">
-                            <label for="lname">LAST NAME</label>
-                            <input type="text" id="lname" name="lname">
+                            <label for="lname">LAST NAME*</label>
+                            <input type="text" id="lname" name="lname" required>
                         </div>
                     </div>
                     <div class="row-2">
                         <div class="input-group">
-                            <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email">
+                            <label for="email">EMAIL*</label>
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="input-group">
                             <label for="phonenumber">PHONE NUMBER</label>
-                            <input type="tel" name="phonenumber" id="phonenumber">
+                            <input type="tel" name="phonenumber" id="phonenumber" required>
                         </div>
                     </div>
                     <div class="row-3">
                         <div class="input-group">
-                            <label for="pword">PASSWORD</label>
-                            <input type="password" name="pword" id="pword">
+                            <label for="pword">PASSWORD*</label>
+                            <input type="password" name="pword" id="pword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$
+                            " required>
                         </div>
                         <div class="input-group">
-                            <label for="confirmpword">CONFIRM PASSWORD</label>
-                            <input type="password" name="confirmpword" id="confirmpword">
+                            <label for="confirmpword">CONFIRM PASSWORD*</label>
+                            <input type="password" name="confirmpword" id="confirmpword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
         <div class="submit-btn">
-            <input type="submit" value="Create Account">
-            <p>Already have an account? Log in</p>
+            <input type="submit" form="create-form" value="Create Account">
+            <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>
 
